@@ -6,7 +6,7 @@ services:
     region: franckfurt
     plan: free
     repo: https://github.com/shaina951/webservice.git # optional
-    branche: main
+    branch: main
     buildCommand: npm install
     startCommand: npm start
     envVars:
