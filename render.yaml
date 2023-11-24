@@ -1,7 +1,7 @@
 services:
   # nodejs web service
   - type: web
-    name: cloudweb
+    name: cloud-web
     runtime: node
     region: franckfurt
     plan: free
@@ -12,13 +12,13 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: BDTP
+          name: cloud-db
           property: connectionString
 
 databases:
-  - name: BDTP
+  - name: cloud-db
     region: franckfurt
-    databaseName: BDTP # optional (Render may add a suffix)
+    databaseName: cloud # optional (Render may add a suffix)
     user: cloud # optional
     plan: free
   
