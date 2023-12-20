@@ -6,7 +6,6 @@ services:
     runtime: node
     repo: https://github.com/shaina951/blueprint.git
     branch: main
-    rootDir : cloud-web
     buildCommand: npm install
     startCommand: npm start
     envVars:
@@ -16,11 +15,8 @@ services:
           property: connectionString
 
 databases:
-  - name: cloud-db1
+  - name: cloud-db
     region: franckfurt
     plan: free
     databaseName: cloud 
     user: cloud 
-    
-  
-
