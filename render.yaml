@@ -1,25 +1,25 @@
 services:
-  # nodejs web service
   - type: web
-    name: cloud-web
-    runtime: node
+    name: cloud-web    
     region: franckfurt
     plan: free
-    repo: https://github.com/shaina951/webservice.git # optional
+    runtime: node
+    repo: https://github.com/shaina951/blueprint.git 
     branch: main
     buildCommand: npm install
     startCommand: npm start
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: clouddb
+          name: cloud-db
           property: connectionString
 
 databases:
-  - name: clouddb
+  - name: cloud-db
     region: franckfurt
-    databaseName: cloud # optional (Render may add a suffix)
-    user: cloud # optional
     plan: free
+    databaseName: cloud 
+    user: cloud 
+    
   
 
