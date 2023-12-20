@@ -12,11 +12,11 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: cloud-db1
+          name: clouddb
           property: connectionString
 
 databases:
-  - name: cloud-db1
+  - name: clouddb
     region: franckfurt
     databaseName: cloud # optional (Render may add a suffix)
     user: cloud # optional
