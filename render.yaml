@@ -1,7 +1,7 @@
 services:
   - type: web
     name: cloud-web    
-    region: franckfurt
+    region: frankfurt
     plan: free
     runtime: node
     repo: https://github.com/shaina951/blueprint.git
@@ -16,7 +16,7 @@ services:
 
 databases:
   - name: cloud-db
-    region: franckfurt
+    region: frankfurt
     plan: free
     databaseName: cloud 
     user: cloud 
